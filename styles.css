@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    height: 10vh;
+    padding: 2px 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 12px 5px 10px rgba(255, 255, 255, 0.7);
+    background: #000;
+}
+
+.Logo {
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+li a {
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    transition: all 0.3s ease;
+    margin-right: 25px;
+
+}
+
+li a:hover {
+    color: #ff014f;
+}
+
+.section1 {
+    width: 100%;
+    height: 90vh;
+    text-align: center;
+    border: 1px solid black;
+    background-color: #000;
+}
+
+.section1 .slogan {
+    width: 100%;
+    height: 20vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 60px;
+    transition: all 0.3s ease;
+}
+
+.section1 .slogan:hover {
+    color: #ff014f;
+    transform: scale(1.2);
+}
+
+.section1 .imagecase {
+    width: 80%;
+    height: 70vh;
+    border-radius: 20px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-image: url(./Img/teampicture.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.section2 {
+    width: 100%;
+    height: 180vh;
+    background-color: #000;
+}
+
+.section2 .teammembers {
+    width: 100%;
+    height: 20vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 35px;
+    transition: all 0.3s ease;
+}
+
+.section2 .teammembers:hover {
+    color: #ff014f;
+    transform: scale(1.2);
+}
+
+.section2 .memberlign1 {
+    width: 90%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.section2 .members {
+    width: 20%;
+    height: 70vh;
+    border-radius: 20px;
+    background-color: #fff;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section2 .memberlign2 {
+    width: 90%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.section2 .member1 {
+    width: 30%;
+    height: 70vh;
+    background-image: url(./Img/memberA.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.section2 .member2 {
+    width: 30%;
+    height: 70vh;
+    background-image: url(./Img/memberB.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.section2 .member3 {
+    width: 30%;
+    height: 70vh;
+    background-image: url(./Img/memberC.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.section2 .member4 {
+    width: 30%;
+    height: 70vh;
+    background-image: url(./Img/memberD.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.section2 .member5 {
+    width: 30%;
+    height: 70vh;
+    background-image: url(./Img/memberE.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.section3 {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+.section3 .missionStatement {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section3 .imagemission {
+    width: 90%;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 20px;
+    background-image: url(./Img/mission1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.section3 .missionStatement1 {
+    width: 50%;
+    height: 100%;
+    color: #fff;
+}
+
+.section3 .missionStatement1 .ms1 {
+    width: 100%;
+    height: 10vh;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section3 .missionStatement1 .msp1 {
+    width: 80%;
+    height: 50vh;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.section4 {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+}
+
+.section4 .problemstatement {
+    width: 50%;
+    height: 100%;
+}
+
+.section4 .imageproblem {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+}
+
+.section4 .imageproblem1 {
+    width: 90%;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 20px;
+    background-image: url(./Img/imageproblem1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.section4 .problemstatement .ps1 {
+    width: 100%;
+    height: 10vh;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section4 .problemstatement .psp1 {
+    width: 80%;
+    height: 50vh;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.footer {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+}
