@@ -214,28 +214,35 @@ li a:hover {
     width: 50%;
     height: 100%;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 1rem;
 }
 
 .section3 .missionStatement1 .ms1 {
     width: 100%;
-    height: 10vh;
+    flex: 0 0 auto;
     font-size: 30px;
     text-transform: uppercase;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: .8rem;
 }
 
 .section3 .missionStatement1 .msp1 {
-    width: 80%;
-    height: 50vh;
-    font-size: 20px;
+    width: 100%;
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: 46vh;
+    overflow-y: auto;
+    font-size: 18px;
+    line-height: 1.5;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 0 auto;
+    padding: 0 .5rem;
 }
 
 .section4 {
@@ -251,6 +258,10 @@ li a:hover {
 .section4 .problemstatement {
     width: 50%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 1rem;
 }
 
 .section4 .imageproblem {
@@ -274,24 +285,27 @@ li a:hover {
 
 .section4 .problemstatement .ps1 {
     width: 100%;
-    height: 10vh;
+    flex: 0 0 auto;
     font-size: 30px;
     text-transform: uppercase;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: .8rem;
 }
 
 .section4 .problemstatement .psp1 {
-    width: 80%;
-    height: 30vh;
-    font-size: 20px;
+    width: 100%;
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: 46vh;
+    overflow-y: auto;
+    font-size: 17px;
+    line-height: 1.5;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 0 auto;
+    padding: 0 .5rem;
 }
 
 .footer {
