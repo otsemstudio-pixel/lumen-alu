@@ -14,6 +14,199 @@ html{
 }
 
 /* ---------- Fondu d'entrée de la page ---------- */
+/* Visible par défaut : si animations.js ne se charge pas, la page reste affichée */
+body{ opacity: 1; }
+body.fade-init{ opacity: 0; transition: opacity .6s var(--ease); }
+body.fade-init.fade-in{ opacity: 1; }
+
+/* ---------- Révélation au scroll ---------- */
+.reveal{
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .8s var(--ease), transform .8s var(--ease);
+  will-change: opacity, transform;
+}
+.reveal.in-view{
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1{ transition-delay: .08s; }
+.reveal-delay-2{ transition-delay: .16s; }
+.reveal-delay-3{ transition-delay: .24s; }
+.reveal-delay-4{ transition-delay: .32s; }
+.reveal-delay-5{ transition-delay: .40s; }
+
+/* ---------- En-tête : collant + effet au scroll ---------- */
+header.navbar{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  transition: box-shadow .35s var(--ease), background-color .35s var(--ease);
+}
+header.navbar.scrolled{
+  background-color: rgba(0,0,0,.92);
+  box-shadow: 0 14px 34px -14px rgba(0,0,0,.75);
+  backdrop-filter: blur(8px);
+}
+
+/* ---------- Logo ---------- */
+.Logo{
+  display: inline-block;
+  transition: transform .3s var(--ease), text-shadow .3s var(--ease);
+}
+.Logo:hover{
+  transform: translateY(-2px);
+  text-shadow: 0 0 18px rgba(255,1,79,.55);
+}
+
+/* ---------- Liens de nav : soulignement animé ---------- */
+header.navbar li a{
+  position: relative;
+  display: inline-block;
+}
+header.navbar li a::after{
+  content: '';
+  position: absolute;
+  left: 0; bottom: -8px;
+  width: 0; height: 2px;
+  background: var(--accent);
+  transition: width .35s var(--ease);
+}
+header.navbar li a:hover::after{
+  width: 100%;
+}
+
+/* ---------- Halo ambiant dans chaque section d'accueil ---------- */
+.section1{
+  position: relative;
+  overflow: hidden;
+}
+.section1::before{
+  content: '';
+  position: absolute;
+  width: 620px;
+  height: 620px;
+  left: 50%;
+  top: -280px;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(255,1,79,.28), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  animation: lumen-drift 16s ease-in-out infinite;
+}
+.section1 > *{
+  position: relative;
+  z-index: 1;
+}
+@keyframes lumen-drift{
+  0%, 100% { transform: translate(-50%, 0) scale(1); }
+  50%      { transform: translate(-50%, 26px) scale(1.08); }
+}
+
+/* ---------- Lever au survol (cartes, images, blocs) ---------- */
+.lift-hover{
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease), filter .4s var(--ease);
+}
+.lift-hover:hover{
+  transform: translateY(-8px) scale(1.015);
+  box-shadow: 0 26px 50px -20px rgba(0,0,0,.75);
+  filter: brightness(1.06);
+}
+
+/* ---------- Survol image / vidéo : léger zoom ---------- */
+.zoom-hover{
+  transition: transform .5s var(--ease);
+}
+.zoom-hover:hover{
+  transform: scale(1.035);
+}
+
+/* ---------- Bouton générique animé (mail, CTA…) ---------- */
+.btn-glow{
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  border: 1px solid rgba(255,255,255,.25);
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease), background-color .3s var(--ease);
+}
+.btn-glow:hover{
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent), 0 18px 40px -16px rgba(255,1,79,.55);
+  background-color: rgba(255,1,79,.08);
+}
+
+/* ---------- Liste de solutions : badges numérotés animés ---------- */
+.msp2{
+  list-style: none;
+  counter-reset: lumen-step;
+}
+.msp2 li{
+  position: relative;
+  counter-increment: lumen-step;
+  padding-left: 3.2rem !important;
+  text-align: left;
+  transition: transform .35s var(--ease);
+}
+.msp2 li::before{
+  content: counter(lumen-step);
+  position: absolute;
+  left: 0; top: 0;
+  width: 2.2rem; height: 2.2rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  box-shadow: 0 0 0 4px rgba(255,1,79,.18);
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+}
+.msp2 li:hover{
+  transform: translateX(6px);
+}
+.msp2 li:hover::before{
+  transform: scale(1.12);
+  box-shadow: 0 0 0 7px rgba(255,1,79,.28);
+}
+
+/* ---------- Pied de page ---------- */
+.footer{
+  position: relative;
+}
+.footer::before{
+  content: '';
+  position: absolute;
+  top: 0; left: 10%;
+  width: 80%; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
+}
+
+/* ---------- Confort de lecture / accessibilité ---------- */
+@media (prefers-reduced-motion: reduce){
+  *{ animation: none !important; transition: none !important; }
+  .reveal{ opacity: 1; transform: none; }
+  body{ opacity: 1; }
+  .section1::before{ display:none; }
+}
+/* =====================================================================
+   ANIMATIONS.CSS — système d'animation partagé pour tout le site Lumen
+   À inclure APRÈS la feuille de style propre à chaque page.
+   ===================================================================== */
+
+:root{
+  --accent: #ff014f;
+  --accent-soft: #ff5d85;
+  --ease: cubic-bezier(.22,.61,.36,1);
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* ---------- Fondu d'entrée de la page ---------- */
 body{ opacity: 0; }
 html.page-ready body{
   opacity: 1;
