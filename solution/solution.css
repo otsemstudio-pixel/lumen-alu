@@ -5,13 +5,13 @@
     text-decoration: none;
     list-style: none;
     font-family: 'Poppins', sans-serif;
-
+ 
 }
-
+ 
 body {
     width: 100%;
 }
-
+ 
 header {
     width: 100%;
     height: 10vh;
@@ -22,32 +22,32 @@ header {
     box-shadow: 12px 5px 10px rgba(255, 255, 255, 0.7);
     background: #050507;
 }
-
+ 
 .Logo {
     font-size: 30px;
     font-weight: 600;
     text-transform: uppercase;
     color: #fff;
 }
-
+ 
 li {
     display: inline-block;
     padding: 0 20px;
 }
-
+ 
 li a {
     font-size: 18px;
     font-weight: 500;
     color: #fff;
     transition: all 0.3s ease;
     margin-right: 25px;
-
+ 
 }
-
+ 
 li a:hover {
     color: #ff014f;
 }
-
+ 
 .section1 {
     width: 100%;
     height: 20vh;
@@ -58,7 +58,7 @@ li a:hover {
     background: radial-gradient(120% 100% at 50% 0%, #15090f 0%, #000 55%);
     color: #fff;
 }
-
+ 
 .section3 {
     width: 100%;
     height: 60vh;
@@ -67,7 +67,7 @@ li a:hover {
     align-items: center;
     background-color: #0a0a0c;
 }
-
+ 
 .section3 .missionStatement {
     width: 50%;
     height: 100%;
@@ -75,7 +75,7 @@ li a:hover {
     justify-content: center;
     align-items: center;
 }
-
+ 
 .section3 .imagemission {
     width: 90%;
     height: 80%;
@@ -85,7 +85,7 @@ li a:hover {
     background-size: cover;
     background-position: center;
 }
-
+ 
 .section3 .imagemission1 {
     width: 90%;
     height: 80%;
@@ -95,46 +95,57 @@ li a:hover {
     background-size: cover;
     background-position: center;
 }
-
+ 
 .section3 .missionStatement1 {
     width: 50%;
     height: 100%;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 1rem;
 }
-
+ 
 .section3 .missionStatement1 .ms1 {
     width: 100%;
-    height: 10vh;
+    flex: 0 0 auto;
     font-size: 30px;
     text-transform: uppercase;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: .8rem;
 }
-
+ 
 .section3 .missionStatement1 .msp1 {
-    width: 80%;
-    height: 50vh;
-    font-size: 20px;
+    width: 100%;
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: 46vh;
+    overflow-y: auto;
+    font-size: 18px;
+    line-height: 1.5;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 0 auto;
+    padding: 0 .5rem;
 }
-
+ 
 .section3 .missionStatement1 .msp2 {
-    width: 80%;
-    height: 50vh;
-    font-size: 20px;
+    width: 100%;
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: 46vh;
+    overflow-y: auto;
+    font-size: 18px;
     margin: 0 auto;
+    padding: 0 .5rem;
 }
-
+ 
 .section3 .missionStatement1 .msp2 li {
     padding: 10px 0;
 }
-
+ 
 .section4 {
     width: 100%;
     height: 60vh;
@@ -144,12 +155,16 @@ li a:hover {
     background-color: #000;
     color: #fff;
 }
-
+ 
 .section4 .problemstatement {
     width: 50%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 1rem;
 }
-
+ 
 .section4 .imageproblem {
     width: 50%;
     height: 100%;
@@ -158,7 +173,7 @@ li a:hover {
     align-items: center;
     align-items: center;
 }
-
+ 
 .section4 .imageproblem1 {
     width: 90%;
     height: 80%;
@@ -168,29 +183,32 @@ li a:hover {
     background-size: cover;
     background-position: center;
 }
-
+ 
 .section4 .problemstatement .ps1 {
     width: 100%;
-    height: 10vh;
+    flex: 0 0 auto;
     font-size: 30px;
     text-transform: uppercase;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: .8rem;
 }
-
+ 
 .section4 .problemstatement .psp1 {
-    width: 80%;
-    height: 50vh;
-    font-size: 20px;
+    width: 100%;
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: 46vh;
+    overflow-y: auto;
+    font-size: 17px;
+    line-height: 1.5;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 0 auto;
+    padding: 0 .5rem;
 }
-
+ 
 .footer {
     width: 100%;
     height: 20vh;
