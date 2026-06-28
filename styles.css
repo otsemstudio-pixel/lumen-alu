@@ -20,7 +20,7 @@ header {
     align-items: center;
     justify-content: space-between;
     box-shadow: 12px 5px 10px rgba(255, 255, 255, 0.7);
-    background: #000;
+    background: #050507;
 }
 
 .Logo {
@@ -53,7 +53,7 @@ li a:hover {
     height: 90vh;
     text-align: center;
     border: 1px solid black;
-    background-color: #000;
+    background: radial-gradient(120% 100% at 50% 0%, #15090f 0%, #000 55%);
 }
 
 .section1 .slogan {
@@ -189,7 +189,7 @@ li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000;
+    background-color: #0a0a0c;
 }
 
 .section3 .missionStatement {
